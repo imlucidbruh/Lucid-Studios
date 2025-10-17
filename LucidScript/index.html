@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lucid Coder IDE V1.0.0</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ide-container slide-down">
+    <h1>Lucid Coder IDE V1.0.0</h1>
+
+    <div class="tabs">
+      <button class="tab active" onclick="switchTab('Script')">Script</button>
+      <button class="tab" onclick="switchTab('Core Script')">Core Script</button>
+      <button class="tab" onclick="switchTab('Module')">Module</button>
+    </div>
+
+    <div class="editor-wrapper">
+      <textarea id="editor">print("Hello world!")</textarea>
+      <div id="suggestionBox"></div>
+    </div>
+
+    <div class="buttons">
+      <button id="runBtn">Run</button>
+      <button id="saveBtn">Save Project</button>
+    </div>
+
+    <div id="output" class="slide-up"></div>
+
+    <div class="console-tab slide-up">
+      <h2>Console</h2>
+      <div id="console"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

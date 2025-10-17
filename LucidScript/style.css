@@ -1,0 +1,154 @@
+body {
+  background-color: #0a0a1a;
+  color: #00f0ff;
+  font-family: 'Courier New', monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.ide-container {
+  width: 80%;
+  max-width: 800px;
+  background: #111122;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 30px #00f0ff;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.tab {
+  background-color: #222244;
+  color: #00f0ff;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.tab.active {
+  background-color: #00f0ff;
+  color: #0a0a1a;
+}
+
+.editor-wrapper {
+  position: relative;
+}
+
+textarea {
+  width: 100%;
+  height: 200px;
+  background-color: #0a0a1a;
+  color: #00f0ff;
+  border: none;
+  border-radius: 6px;
+  padding: 15px;
+  font-size: 16px;
+  resize: none;
+  box-shadow: inset 0 0 10px #00f0ff;
+  line-height: 24px;
+  white-space: pre;
+}
+
+#suggestionBox {
+  position: absolute;
+  background: #111122;
+  color: #00f0ff;
+  border: 1px solid #00f0ff;
+  border-radius: 6px;
+  padding: 5px;
+  display: none;
+  z-index: 1000;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.buttons {
+  margin-top: 10px;
+}
+
+#runBtn, #saveBtn {
+  padding: 10px 20px;
+  background-color: #00f0ff;
+  color: #0a0a1a;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+#output {
+  margin-top: 20px;
+  background-color: #222244;
+  color: #00ff88;
+  padding: 15px;
+  border-radius: 6px;
+  min-height: 50px;
+  font-size: 16px;
+}
+
+.console-tab {
+  margin-top: 20px;
+  background-color: #0a0a1a;
+  border: 1px solid #00f0ff;
+  padding: 15px;
+  border-radius: 6px;
+  color: #ff0044;
+  font-size: 14px;
+  box-shadow: 0 0 10px #00f0ff;
+}
+
+.console-tab h2 {
+  color: #00f0ff;
+  margin-bottom: 10px;
+}
+
+/* Animations */
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideLeft {
+  from { transform: translateX(-30px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideRight {
+  from { transform: translateX(30px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+.slide-up {
+  animation: slideUp 0.4s ease-out;
+}
+
+.slide-down {
+  animation: slideDown 0.4s ease-out;
+}
+
+.slide-left {
+  animation: slideLeft 0.4s ease-out;
+}
+
+.slide-right {
+  animation: slideRight 0.4s ease-out;
+}
